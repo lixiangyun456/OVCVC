@@ -1,0 +1,119 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:after{
+    display: block;
+    clear: both;
+    content: "";
+}
+body a,a:hover{
+    text-decoration: none;
+}
+li{
+    float: left;
+}
+
+/*header部分*/
+header .row .row-img,.hui{
+    float: left;
+}
+header .row .hui{
+    margin-top: 22px;
+    font-size: 18px;
+}
+header .row .shou{
+    float: right;
+    padding-top: 25px;
+}
+header .row .shou a{
+    color: #333333;
+}
+
+
+/*main部分*/
+.main{
+    background-color: #f0610e;
+}
+.mian fieldset{
+    width: 400px;
+    margin: auto;
+}
+.main label{
+    width: 100px;
+    float: left;
+    text-align: right;
+}
+.main form{
+    background: #FFFFFF;
+}
+.main form p,.main-con form p{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+.main span{
+    color: red;
+    font-size: 12px;
+    display: block;
+    width: 119px;
+    margin-left: 92px;
+    margin-top: 5px;
+}
+.main form input,.main-con form input{
+    width: 256px;
+    height: 36px;
+    outline: none;
+    padding-left: 15px;
+    border: 1px solid #000000;
+}
+.main-con form input{
+    width: 240px;
+}
+.main form #ti,#chong{
+    width: 124px;
+    height: 40px;
+    background-color: #286090;
+    color: #FFFFFF;
+    border: none;
+}
+.main-con{
+    background-image: url("../img/qiu.jpg");
+    background-size: cover;
+    height: 540px;
+}
+.main-con form{
+    background: rgba(255,255,255,0.6);
+}
+.main-con form .denglv,form .deng{
+    margin:auto;
+    background-color: rgba(51, 122, 183, 0.75);
+    border-color: #2e6da4;
+    display: block;
+    width: 238px;
+    height: 40px;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 40px;
+}
+.main-con form .deng{
+    background-color: #31b0d5;
+    border-color: #269abc;
+}
+.main-con form .pa a{
+    padding-right: 151px;
+    color: #000;
+    display: block;
+}
+.main-con form .qq .fa{
+    color: #70A8D6;
+    font-size: 35px;
+    padding-right: 38px;
+}
+.main-con form .qq .fa-weixin{
+    color: #54C135;
+}
+.main-con form .qq .fa-weibo{
+    color: #E07366;
+}

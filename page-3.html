@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="font/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/css.css">
+    <script>
+        function checkPaw(){
+            var n=document.getElementById("paw").value;
+            if(n.length<8){
+                document.getElementById("pawSpan").innerHTML="密码不小于8位";
+            }else if(!isNaN(n)){
+                document.getElementById("pawSpan").innerHTML="不能是纯数字;"
+            }
+            else{
+                document.getElementById("pawSpan").innerHTML="正确";
+            }
+        }
+        function checkcid(){
+            var cid=document.getElementById("cid").value;
+            var a=/(^\d{15}$)|(^\d{17}(\d|X)$)/;
+            if(a.test(cid)){
+                document.getElementById("cidSpan").innerHTML="OK";
+            }else{
+                document.getElementById("cidSpan").innerHTML="worry";
+            }
+        }
+        function checkAll(){
+            var  name=document.getElementById("name").value;
+            var n=document.getElementById("paw").value;
+            if(name==""||n==""){
+                alert("密码必填");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+<!--header部分-->
+<header>
+    <div class="container" style="padding-top: 50px;">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="img/logo.png" alt="" class="img-responsive row-img">
+                <p class="hui">会员注册</p>
+            </div>
+            <div class="col-md-6">
+                <div class="shou"><a href="index.html">返回首页</a></div>
+            </div>
+        </div>
+    </div>
+</header>
+<!--main-con部分-->
+<div class="main-con">
+    <div class="container" style="padding-top: 80px;padding-bottom: 80px;">
+        <div class="row">
+            <div class="col-md-offset-4 col-md-4">
+                    <form action="#" method="post" >
+                          <p style="padding-top: 22px;text-align: center;"><input type="text" id="name" onkeyup="checkNmae()" placeholder="用户名/邮箱/手机"><span id="nameSpan"></span></p>
+                          <p style="text-align: center;"><input type="password" id="paw" onkeyup="checkPaw()" placeholder="密码"><span id="pawSpan" style="float: left;"></span></p>
+                          <p class="pa" style="text-align: center;"><a href="#">忘记密码?</a></p>
+                          <p><a href="#" onclick="return checkAll()" class="denglv">登录</a></p>
+                          <p style="text-align: center;">其它方式登录</p>
+                          <p class="qq" style="text-align: center;"><i class="fa fa-qq"></i><i class="fa fa-weixin"></i><i class="fa fa-weibo"></i></p>
+                          <p><a href="#" class="deng">没有账号？现在去注册</a></p>
+                    </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--footer部分-->
+<footer>
+    <div class="container" style="padding-top: 20px;padding-bottom: 20px;">
+        <div class="row">
+            <p style="text-align: center;">© COPYRIGHT 2017 | 沪ICP备16047782号-1
+                Designed by OVCVC in Italy</p>
+        </div>
+    </div>
+</footer>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
